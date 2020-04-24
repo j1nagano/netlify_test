@@ -15,7 +15,10 @@ exports.handler = async function(event, context, callback) {
   // マッチしなければ処理は中断
   const matchResult = targetEvent.message.text.match(/[\d+]|スタート/)
   if (!matchResult) {
-    callback(null, {})
+    callback(null, {
+      statusCode: 200,
+      messages: messageData.defaultMessage
+    })
   }
 
   const messageKey = matchResult[0]
