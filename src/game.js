@@ -15,6 +15,8 @@ exports.handler = async function(event, context, callback) {
   // マッチしなければ処理は中断
   const matchResult = targetEvent.message.text.match(/[\d+]|スタート/)
   if (!matchResult) {
+    console.log("the mutch result is null.")
+    console.log(messageData.defaultMessage)
     callback(null, {
       statusCode: 200,
       messages: messageData.defaultMessage
