@@ -14,11 +14,17 @@ exports.handler = async function(event, context, callback) {
   // 次のメッセージを決定するために、"スタート" or "1" などの文字列が入る
   // マッチしなければ処理は中断
   const matchResult = targetEvent.message.text.match(/[\d+]|スタート/)
+  messageKey = ""
   if (!matchResult) {
-    callback(null, {})
+    console.log("the mutch result is null.")
+    console.log(messageData.defaultMessage)
+    //callback(null, {})
+    messageKey = "0"
+  }
+  else {
+    messageKey = matchResult[0]
   }
 
-  const messageKey = matchResult[0]
   const data = {
     replyToken: targetEvent.replyToken,
     messages: [messageData[messageKey]]
