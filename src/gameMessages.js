@@ -1,5 +1,4 @@
 export default {
-  defaultMessage: "「スタート」を送るとゲームスタート",
   "スタート": {
     type: 'text',
     text: '技術書展の締切りまであと7日、だけど進捗は10%未満。あなたはどうする？',
