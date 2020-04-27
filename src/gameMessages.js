@@ -33,7 +33,7 @@ export default {
   },
   "0": {
     type: 'text',
-    text: "「スタート」を送るとゲームスタート",
+    text: "「スタート」を送るとゲームスタート"
   },
   "1": {
     type: 'text',
