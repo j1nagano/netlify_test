@@ -17,7 +17,6 @@ exports.handler = async function(event, context, callback) {
   messageKey = ""
   if (!matchResult) {
     console.log("the mutch result is null.")
-    console.log(messageData.defaultMessage)
     //callback(null, {})
     messageKey = "0"
   }
