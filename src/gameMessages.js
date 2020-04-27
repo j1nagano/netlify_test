@@ -31,10 +31,6 @@ export default {
       ]
     }
   },
-  "0": {
-    type: 'text',
-    text: "「スタート」を送るとゲームスタート"
-  },
   "1": {
     type: 'text',
     text: '頑張り過ぎず寝るべし'
